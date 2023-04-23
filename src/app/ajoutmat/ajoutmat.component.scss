@@ -1,0 +1,28 @@
+.soir{
+    background: #263238;
+    transition: all .5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    font-family: Arial;
+    margin-top: 10px;
+    margin-left: 88%;
+}
+section{
+	margin-top: 20px;
+	margin-left: 350px;
+	font-family: Arial;
+}
+section form{
+	border: 1px solid gray;
+	width: 560px;
+	height: 420px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+.nou{
+    border: 1px solid gray;
+	background: silver;
+	padding-right: 427px;
+	border-radius: 8px 8px 0px 0px;	
+}

@@ -1,0 +1,73 @@
+<div class="soir" *ngFor="let date of atlData">
+    <a href="" style="font-size: 30px;" [href]="date.routeLink"><i class="fal fa-share" style="color: white;"></i></a>
+</div>
+
+<section>
+    <form method="post" id="insert_form" action="">
+        <strong class="nou">Nouvelle Atelier </strong> 
+        <br>
+        <br>
+        <br>
+        <label>Nom Atelier</label>
+        <input type="text" name="name_user" id="name_user" class="form-control">
+        <br />
+        <label>Capacité</label>
+        <input type="number" name="capac" id="password_user" class="form-control">
+        <br />
+        <label>Equipement</label>
+        <input type="text" name="cni_user" id="cni_user" class="form-control">
+        <br />
+        <label>Nombre Equipement</label>
+        <input type="number" name="email_user" id="email_user" class="form-control">
+        <br />
+        <label>Logiciels nécessaire</label><button type="button" name="add" id="add" data-toggle="modal" data-target="#myModal" class="btn btn-lg" style="background: black; color: white;">choisir logiciel</button>
+        <br />
+        <label>Date installation</label>
+        <input type="Date" name="datei" id="nom" class="form-control">
+        <br />
+        <label>Immeuble d'appartenance</label>
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" style="background: black; color: white;">choisir Campus</button>
+            <ul class="dropdown-menu" style="background: black; color:white;">
+                <input type="radio" name="Campus" value="D" id="D" /> <label for="D">Immeuble D</label><br />   
+                <input type="radio" name="Campus" value="G" id="G" /> <label for="G">Immeuble G</label><br />
+            </ul>
+          </div>
+        <br />
+        <input type="submit" name="insert" id="insert" value="Ajouter" class="btn btn-success">
+    </form>
+</section>
+
+<!--booststrap modal-->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+  
+           <div class="modal-header">
+                <h4 class="modal-title">Ajouter un utilisateur</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+  
+            <div class="modal-body">
+               <form method="post" id="insert_form" action="">
+                    <label>Name of user</label>
+                    <input type="text" name="name_user" id="name_user" class="form-control">
+                    <br />
+                    <label>Password of user</label>
+                    <input type="password" name="password_user" id="password_user" class="form-control">
+                    <br />
+                    <label>Nomba CNI of user</label>
+                    <input type="text" name="cni_user" id="cni_user" class="form-control">
+                    <br />
+                    <label>Email of user</label>
+                    <input type="email" name="email_user" id="email_user" class="form-control">
+                    <br />
+                    <input type="submit" name="insert" id="insert" value="Ajouter" class="btn btn-success">
+                </form>
+           </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" >Close</button>
+            </div>
+        </div>
+    </div>
+</div>

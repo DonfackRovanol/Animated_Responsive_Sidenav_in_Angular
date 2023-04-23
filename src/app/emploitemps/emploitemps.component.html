@@ -1,0 +1,56 @@
+<div >
+    <form class="search-box">
+        <input type="text" name="" class="search-txt" placeholder="type to search">
+        <button type="submit" class="search-btn">
+            <i class="fal fa-search"></i>
+        </button>
+    </form>
+</div>
+
+<div style="margin-left: 92.6%; margin-top: 170px;">
+    <div class="dropdown" id="bss">
+        <button class="dropdown-toggle" id="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Inserer</button>
+        <ul class="dropdown-menu" id="mr">
+          <li *ngFor="let date of empData"><a class="dropdown-item" [href]="date.routeLink">
+             {{date.label}} 
+          </a></li>
+        </ul>
+      </div>
+</div>
+
+<table class="table table-striped table-inverse table-responsive ">
+    <thead class="thead-inverse">
+        <tr class="black">
+            <th>HORAIRE</th>           
+	        <th>LUNDI</th>
+	        <th>MARDI</th>           
+	        <th>MERCREDI</th>
+	        <th>JEUDI</th>
+	        <th>VENDREDI</th>
+	        <th>SAMEDI</th>
+            <th>DIMENCHE</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+</table>

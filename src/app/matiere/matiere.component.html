@@ -1,0 +1,35 @@
+<div >
+    <form class="search-box">
+        <input type="text" name="" class="search-txt" placeholder="type to search">
+        <button type="submit" class="search-btn">
+            <i class="fal fa-search"></i>
+        </button>
+    </form>
+</div>
+<div *ngFor="let date of matData">
+    <div style="margin-left: 93.8%; margin-top: 170px;">
+        <a [href]="date.routeLink" class="btn btn-lg" style="background: black; color: white;">insert</a>  
+      </div>
+      
+      <table class="table table-striped table-inverse table-responsive ">
+          <thead class="thead-inverse">
+              <tr class="black">
+                  <th>Matière</th>
+                  <th>Logiciel</th>           
+                  <th>Equipement</th>
+                  <th>Action</th>        
+              </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let matiere of matiereList">
+                      <td scope="row">{{matiere.nom_matiere}}</td>
+                      <td></td>
+                      <td>{{matiere.equipement_necessaire}}</td>
+                      <td scope="row">      
+                          <a [href]="date.routeLink" (click)="editmatiere( matiere)" class="btn btn-success me-2">Edite</a> 
+                          <input type="button" value="Delete" (click)="deletematiere( matiere)" class="btn btn-danger">
+                      </td>
+                  </tr>
+              </tbody>
+      </table>
+</div>

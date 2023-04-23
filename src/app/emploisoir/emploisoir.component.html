@@ -1,0 +1,133 @@
+<div class="soir" *ngFor="let date of empsData">
+    <a href="" style="font-size: 30px;" [href]="date.routeLink"><i class="fal fa-share" style="color: white;"></i></a>
+</div>
+
+<aside style="margin-left: 0%; margin-top: 40px;">
+    <span class="message" style="font-family: Arial;">EMPLOI DU TEMPS</span>
+    <form method="POST" action="" id="Attri">
+        <br />
+        <span style="margin-left: 36%;">
+            <i style="font-family: Arial;" >Classe</i>
+            <input type="text" name="Classe" id="clas" required>
+        </span>
+
+        <table class="table table-striped table-inverse table-responsive">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>HORAIRE</th>           
+	            	<th>LUNDI</th>
+	            	<th>MARDI</th>           
+	            	<th>MERCREDI</th>
+	            	<th>JEUDI</th>
+	            	<th>VENDREDI</th>
+	            	<th>SAMEDI</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="tr">           
+                        <td>17H30-19H30</td>
+                        <td>
+                            
+                                    <i>Matière1</i>
+                                <input type="texte" name="matiere1" class="mat" /><br>
+                                    <i>enseignant</i>
+                                <input type="texte" name="enseignant1" class="enseig" /><br>
+                            
+                        </td>
+                        <td>
+                            
+                                    <i>Matière2</i>
+                                <input type="texte" name="matiere5" class="mat" /><br>
+                                    <i>enseignat</i>
+                                <input type="texte" name="enseignant5" class="enseig" /><br>
+                           
+                        </td>
+                        <td>
+                            
+                                    <i>Matière3</i>
+                                <input type="texte" name="matiere9" class="mat" /><br>
+                                    <i>enseignat</i>
+                                <input type="texte" name="enseignant9" class="enseig" /><br>
+                           
+                        </td>
+                        <td>
+                            
+                                    <i>Matière4</i>
+                                <input type="texte" name="matiere13" class="mat" /><br>
+                                    <i>enseignat</i>
+                                <input type="texte" name="enseignant13" class="enseig" /><br>
+                           
+                        </td>
+                        <td>
+                            
+                                    <i>Matière5</i>
+                                <input type="texte" name="matiere17" class="mat" /><br>
+                                    <i>enseignat</i>
+                                <input type="texte" name="enseignant17" class="enseig" /><br>
+                           
+                        </td>           
+                        <td>
+                               
+                                    <i>Matière6</i>
+                                <input type="texte" name="matiere21" class="mat" /><br>
+                                    <i>enseignat</i>
+                                <input type="texte" name="enseignant21" class="enseig" /><br>
+                           
+                        </td>      
+                    </tr>       
+                    <tr>           
+                        <td>19H30-21H30</td>
+                        <td>
+                            
+                                    <i>Matière1</i>
+                                <input type="texte" name="matiere2" class="mat" /><br>
+                                   <i>enseignat</i>
+                                <input type="texte" name="enseignant2" class="enseig" /><br>
+                           
+                        </td>
+                        <td>
+                               
+                                    <i>Matière2</i>
+                                <input type="texte" name="matiere6" class="mat" /><br>
+                                    <i>enseignat</i>
+                                <input type="texte" name="enseignant6" class="enseig" /><br>
+                           
+                        </td>
+                        <td>
+                                
+                                    <i>Matière3</i>
+                                <input type="texte" name="matiere10" class="mat" /><br>
+                                    <i>enseignat</i>
+                                <input type="texte" name="enseignant10" class="enseig" /><br>
+                           
+                        </td>
+                        <td>
+                            
+                                    <i>Matière4</i>
+                                <input type="texte" name="matiere14" class="mat" /><br>
+                                    <i>enseignat</i>
+                                <input type="texte" name="enseignant14" class="enseig" /><br>
+                           
+                        </td>
+                        <td>
+                            
+                                    <i>Matière5</i>
+                                <input type="texte" name="matiere18" class="mat" /><br>
+                                    <i>enseignat</i>
+                                <input type="texte" name="enseignant18" class="enseig" /><br>
+                           
+                        </td>           
+                        <td>
+                            
+                                    <i>Matière6</i>
+                                <input type="texte" name="matiere22" class="mat" /><br>
+                                    <i>enseignat</i>
+                                <input type="texte" name="enseignant22" class="enseig" /><br>
+                           
+                        </td>           
+                    </tr>       
+                </tbody>
+        </table>
+        <input type="submit" value="Attribuer" class="btn btn-success" />
+    </form>
+</aside>

@@ -1,0 +1,74 @@
+<div >
+    <form class="search-box">
+        <input type="text" name="" class="search-txt" placeholder="type to search">
+        <button type="submit" class="search-btn">
+            <i class="fal fa-search"></i>
+        </button>
+    </form>
+</div>
+
+<div style="margin-left: 93.8%;">
+    
+    <!--booststrap modal button controle-->
+    <div style="margin-top: 170px;">
+        <button type="button" name="add" id="add" data-toggle="modal" data-target="#myModal" class="btn btn-lg" style="background: black; color: white;">insert</button>
+    </div>
+    <!--booststrap modal-->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+      
+               <div class="modal-header">
+                    <h4 class="modal-title" style="font-family: Arial;">Ajouter un utilisateur</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+      
+                <div class="modal-body">
+                   <form [formGroup]="enseignantValue">
+                        <label>Nom enseignant</label>
+                        <input type="text" formControlName="nom_enseignant" name="nom_enseignant" id="nom_ens" class="form-control" required>
+                        <br />
+                        <label>Prenom</label>
+                        <input type="text" formControlName="prenom_enseignant" name="prenom_enseignant" id="Prenom_ens" class="form-control" required>
+                        <br />
+                        <label>Tel</label>
+                        <input type="text" formControlName="tel" name="tel" id="tel_ens" class="form-control" required>
+                        <br />
+                        <label>Email</label>
+                        <input type="email" formControlName="email" name="email" id="email_ens" class="form-control" required>
+                        <br />
+                        <input type="submit" *ngIf="btnSaveShow" id="insert" value="Ajouter" class="btn btn-success" (click)="addenseignant()">
+                        <input type="submit" *ngIf="btnUpdateShow" id="update" value="Modifier" class="btn btn-success" (click)="updateenseignant()">
+                    </form>
+               </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" >Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped table-inverse table-responsive ">
+    <thead class="thead-inverse">
+        <tr class="black">
+            <th> Nom et Prenom</th>
+	        <th>telephone</th>
+	        <th>Email</th>           
+	        <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let enseignant of enseignantList">
+                <td scope="row">{{enseignant.id_enseignant}}</td>
+                <td>{{enseignant.nom_enseignant}}</td>
+                <td>{{enseignant.prenom_enseignant}}</td>
+                <td>{{enseignant.tel}}</td>
+                <td>{{enseignant.email}}</td>
+                <td>
+                    <input type="button" value="Edit" (click)="editenseignant(enseignant)" data-toggle="modal" data-target="#myModal" class="btn btn-success me-2">
+                    <input type="button" value="Delete" (click)="deletenseignant(enseignant)" class="btn btn-danger">
+                </td>
+            </tr>
+        </tbody>
+</table>
